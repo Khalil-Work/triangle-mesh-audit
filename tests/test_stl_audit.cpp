@@ -14,6 +14,7 @@
 //    buffer-size mismatch — all rejected with the documented codes.
 // 6. Degenerate (zero-area) triangles are counted, not dropped.
 
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -135,12 +136,12 @@ int main() {
 
     // 4. ASCII/binary round trip + bogus stored normals ignored.
     {
-        write_ascii_stl("build/tet_ascii.stl", TET, 4);
-        write_binary_stl("build/tet_bin.stl", TET, 4);
+        write_ascii_stl("tet_ascii.stl", TET, 4);
+        write_binary_stl("tet_bin.stl", TET, 4);
         ta_stats a, b;
-        check(triangle_mesh::audit_file("build/tet_ascii.stl", &a) == triangle_mesh::TA_OK,
+        check(triangle_mesh::audit_file("tet_ascii.stl", &a) == triangle_mesh::TA_OK,
               "ascii audit succeeds");
-        check(triangle_mesh::audit_file("build/tet_bin.stl", &b) == triangle_mesh::TA_OK,
+        check(triangle_mesh::audit_file("tet_bin.stl", &b) == triangle_mesh::TA_OK,
               "binary audit succeeds");
         check(a.n_triangles == b.n_triangles && a.n_triangles == 4, "counts match");
         check(std::fabs(a.total_area - b.total_area) < 1e-6 &&
@@ -153,17 +154,17 @@ int main() {
     // 5. Invalid inputs.
     {
         ta_stats st;
-        check(triangle_mesh::audit_file("build/no_such_file.stl", &st) ==
+        check(triangle_mesh::audit_file("no_such_file.stl", &st) ==
                   triangle_mesh::TA_ERR_IO, "missing file -> TA_ERR_IO");
         check(triangle_mesh::audit_vertices(nullptr, 4, &st) == triangle_mesh::TA_ERR_EMPTY,
               "null vertices rejected");
         const double bad[9] = {0, 0, 0, std::nan(""), 0, 0, 1, 0, 0};
         check(triangle_mesh::audit_vertices(bad, 1, &st) == triangle_mesh::TA_ERR_NONFINITE,
               "non-finite coordinate rejected");
-        std::FILE* f = std::fopen("build/trunc.stl", "wb");
+        std::FILE* f = std::fopen("trunc.stl", "wb");
         std::fwrite("binary-not-solid", 1, 16, f);
         std::fclose(f);
-        check(triangle_mesh::count_triangles("build/trunc.stl") < 0,
+        check(triangle_mesh::count_triangles("trunc.stl") < 0,
               "truncated binary rejected");
     }
 
