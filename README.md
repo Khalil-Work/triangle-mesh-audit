@@ -11,12 +11,12 @@ recomputed from vertices, exact area/volume/quality metrics, and honest orientat
 semantics — recovering the unit tetrahedron's exact volume 1/6 and the sphere's
 4π/3 to 1.8e-3 at 9,024 triangles.**
 
-[![tests](https://github.com/khalil-official/triangle-mesh-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-official/triangle-mesh-audit/actions/workflows/ci.yml)
+[![tests](https://github.com/khalil-work/triangle-mesh-audit/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-work/triangle-mesh-audit/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)](src)
 [![exactness](https://img.shields.io/badge/tetrahedron%20volume-exact%201%2F6-orange.svg)](docs/verification.md)
-[![repo stars](https://img.shields.io/github/stars/khalil-official/triangle-mesh-audit?style=flat&color=yellow)](https://github.com/khalil-official/triangle-mesh-audit/stargazers)
-[![last commit](https://img.shields.io/github/last-commit/khalil-official/triangle-mesh-audit?color=9cf)](https://github.com/khalil-official/triangle-mesh-audit/commits)
+[![repo stars](https://img.shields.io/github/stars/khalil-work/triangle-mesh-audit?style=flat&color=yellow)](https://github.com/khalil-work/triangle-mesh-audit/stargazers)
+[![last commit](https://img.shields.io/github/last-commit/khalil-work/triangle-mesh-audit?color=9cf)](https://github.com/khalil-work/triangle-mesh-audit/commits)
 
 [Quick start](#-quick-start) · [Metrics](#-metrics-and-semantics) · [Animation](#%EF%B8%8F-results-gallery) · [Results](#-results-and-metrics) · [References](#-references)
 
