@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="Triangle Mesh Audit banner: graphite triangulated fan mesh with quality and sliver highlights" width="100%">
+<img src="docs/banner.png" alt="Triangle Mesh Audit banner: graphite triangulated fan mesh with quality and sliver highlights" width="100%">
 
 # 🔺 Triangle Mesh Audit
 
@@ -61,7 +61,7 @@ flowchart LR
     B --> C[recompute geometry<br/>from vertices]
     C --> D[per-triangle:<br/>area, volume, q, angles]
     D --> E[mesh totals +<br/>degenerate count]
-    E --> F{known-shape<br/>reference?}
+    E --> F{"known-shape<br/>reference?"}
     F -- yes --> G[✅ compare vs exact<br/>tetrahedron / sphere / disk]
     F -- no --> H[✅ honest metrics,<br/>no repair claims]
     B -- bad --> X[❌ TA_FORMAT etc.,<br/>outputs untouched]
