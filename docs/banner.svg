@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Triangle Mesh Audit banner">
+  <defs>
+    <linearGradient id="graphite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2d20"/>
+      <stop offset="1" stop-color="#14160e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#graphite)"/>
+  <!-- triangulated sphere-ish mesh on LEFT, wordmark RIGHT -->
+  <g transform="translate(90,45)" stroke="#a8b088" stroke-width="1.6" fill="none" opacity="0.95">
+    <!-- outer circle approximated by triangle fan rings -->
+    <circle cx="240" cy="105" r="122" fill="none" stroke="#6b7360" stroke-width="2"/>
+    <circle cx="240" cy="105" r="80" fill="none" stroke="#6b7360" stroke-width="1.4"/>
+    <circle cx="240" cy="105" r="40" fill="none" stroke="#6b7360" stroke-width="1.2"/>
+    <!-- radial spokes -->
+    <g stroke="#a8b088">
+      <line x1="240" y1="105" x2="362" y2="105"/><line x1="240" y1="105" x2="326" y2="191"/>
+      <line x1="240" y1="105" x2="154" y2="191"/><line x1="240" y1="105" x2="118" y2="105"/>
+      <line x1="240" y1="105" x2="154" y2="19"/><line x1="240" y1="105" x2="326" y2="19"/>
+      <line x1="240" y1="105" x2="320" y2="185"/><line x1="240" y1="105" x2="160" y2="185"/>
+    </g>
+    <!-- highlighted triangle with quality q -->
+    <path d="M 240 105 L 326 19 L 326 105 Z" fill="#c9d4a0" fill-opacity="0.18" stroke="#e8e0b0" stroke-width="2.4"/>
+    <!-- highlighted sliver -->
+    <path d="M 240 105 L 362 105 L 352 99 Z" fill="#e0a04b" fill-opacity="0.25" stroke="#e0a04b" stroke-width="2"/>
+    <text x="280" y="70" fill="#e8e0b0" font-family="Consolas, monospace" font-size="14">q = 1</text>
+    <text x="318" y="124" fill="#e0a04b" font-family="Consolas, monospace" font-size="13">sliver → 0</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="640" y="110" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="0.5">Triangle <tspan fill="#c9d4a0">Mesh</tspan> <tspan fill="#e0a04b">Audit</tspan></text>
+    <text x="642" y="152" fill="#b8c0a8" font-size="20">STL geometry, quality &amp; known-shape checks in C++</text>
+    <text x="642" y="188" fill="#7a8268" font-family="Consolas, monospace" font-size="14">V = Σ a·(b×c)/6 · q = 2√3·r_in/L_max · exact 1/6 tetrahedron</text>
+  </g>
+</svg>

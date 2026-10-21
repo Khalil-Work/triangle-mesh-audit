@@ -1,0 +1,56 @@
+{
+  "runtime": {
+    "python": "3.13.5",
+    "compiler": "GCC 16.2.0 (WinLibs) -std=c++17 -O2",
+    "numpy": "2.1.3",
+    "system": "Windows-11-10.0.26200-SP0"
+  },
+  "results": {
+    "sphere_volume_rel_error": 0.00178,
+    "sphere_star_shape_ratio": 1.0,
+    "sphere_quality_max": 0.7223675483,
+    "disk_area_refinement": {
+      "ns": [
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        360,
+        512,
+        768,
+        1024
+      ],
+      "errors": [
+        0.09968368384289383,
+        0.02550464159556729,
+        0.006413148855794295,
+        0.0016056069643815862,
+        0.0004015468503208683,
+        0.00010039578385817655,
+        5.076879670534377e-05,
+        2.5099512949941093e-05,
+        1.1155385754934795e-05,
+        6.274913674518744e-06
+      ],
+      "measured_orders": [
+        1.9665975572312104,
+        1.991655028263697,
+        1.997914114431442,
+        1.9994785510193493,
+        1.9998696391571207,
+        1.9999563284604687,
+        1.9999781359626847,
+        1.9999896827471122,
+        1.999994910549762
+      ],
+      "note": "independent inscribed-polygon formula, cross-checking the audit convention"
+    }
+  },
+  "animation": {
+    "file": "mesh_refinement.gif",
+    "frames": 41,
+    "content": "computed disk fan meshes at growing resolution with measured area error"
+  }
+}
