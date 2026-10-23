@@ -18,7 +18,7 @@ semantics — recovering the unit tetrahedron's exact volume 1/6 and the sphere'
 [![repo stars](https://img.shields.io/github/stars/khalil-work/triangle-mesh-audit?style=flat&color=yellow)](https://github.com/khalil-work/triangle-mesh-audit/stargazers)
 [![last commit](https://img.shields.io/github/last-commit/khalil-work/triangle-mesh-audit?color=9cf)](https://github.com/khalil-work/triangle-mesh-audit/commits)
 
-[Quick start](#-quick-start) · [Metrics](#-metrics-and-semantics) · [Animation](#%EF%B8%8F-results-gallery) · [Results](#-results-and-metrics) · [References](#-references)
+[Homepage](https://khalil-work.github.io) · [Quick start](#-quick-start) · [Metrics](#-metrics-and-semantics) · [Animation](#%EF%B8%8F-results-gallery) · [Results](#-results-and-metrics) · [References](#-references)
 
 </div>
 
