@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.png" alt="Triangle Mesh Audit banner: graphite triangulated fan mesh with quality and sliver highlights" width="100%">
+<img src="docs/banner.gif" alt="Triangle Mesh Audit banner: graphite triangulated fan mesh with quality and sliver highlights" width="100%">
 
 # 🔺 Triangle Mesh Audit
 
